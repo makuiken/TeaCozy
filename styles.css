@@ -1,0 +1,90 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: black;
+  color: seashell;
+  opacity: .9;
+  font-size: 22px;
+}
+main {
+  padding-top: 69px; /* Add padding to ensure main content is not beneath the header */
+}
+header {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: space-between; /* Place the title to the start and nav content to the end */
+  border-bottom: 1px solid seashell;
+  max-height: 69px;
+  position: fixed; /* Make the header fixed to the top of the viewport */
+  top: 0; /* Fix the header at the top of the page */
+  width: 100%; /* Ensure the header spans the full width of the viewport */
+  z-index: 1000; /* Ensure the header stays above other content */
+  background-color: black;
+}
+.title {
+  display: flex;
+  align-items: center;
+  max-height: 50px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-top: 10px ;
+}
+
+nav ul {
+  display: flex; /* Display the list items in a row */
+  align-items: center; /* Vertically center the items */
+  padding-left: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default list item bullet points */ 
+  justify-content: flex-end; /* Align nav items to the end */
+  margin-left: auto; /* Pushes nav items to the far right */
+  height: 69px; /* Set the height of the nav container */
+}
+nav li {
+  margin-right: 20px; /* Add space between the list items */
+  height: inherit;
+  text-decoration: underline;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 700px;
+  margin:0 5%;
+  width: 1200px;
+  position: relative; /* Added to establish a containing block for the absolute positioning of children */
+}
+
+.mission-container {
+  display: flex;
+  flex-direction: column; /* Stack the child elements vertically */
+  align-items: stretch; /* Stretch the children to fit the container */
+  background-color: black;
+  align-content: center;
+  width: 100%;
+  position: absolute;
+}
+
+.featured-tea {
+  display: flex;
+
+}
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
