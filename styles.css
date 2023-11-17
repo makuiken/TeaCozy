@@ -17,6 +17,9 @@ html {
   opacity: .9;
   font-size: 22px;
 }
+body {
+  text-align: center;
+}
 main {
   padding-top: 69px; /* Add padding to ensure main content is not beneath the header */
 }
@@ -63,7 +66,7 @@ nav li {
   text-align: center;
   height: 700px;
   margin:0 5%;
-  width: 1200px;
+  width: auto;
   position: relative; /* Added to establish a containing block for the absolute positioning of children */
 }
 
@@ -73,13 +76,77 @@ nav li {
   align-items: stretch; /* Stretch the children to fit the container */
   background-color: black;
   align-content: center;
-  width: 100%;
+  width: 1200px;
   position: absolute;
 }
 
 .featured-tea {
-  display: flex;
+  display: inline-flex;
+  margin: auto;
+  justify-content: center;
+  height: auto;
+  max-width: auto;
+  padding-top: 70px;
 
+}
+
+.flex-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  justify-content: center;
+}
+
+.item img {
+  height: 200px;
+  display: block;
+  margin: 10px;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.item span {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+.locations {
+  display: block;
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+  margin: 0 auto;
+  height: 500px;
+  max-width: 1200px;
+  text-align: center;
+  
+}
+
+.locations h2 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.location-container {
+  display: inline-block;
+  background-color: black;
+  opacity: 1;
+  width: 300px;
+  margin: 0 20px;
+}
+
+.contact {
+  display: block;
+  height: 200px;
+}
+
+footer {
+  display: block;
+  text-align: left;
+  padding-left: 20px;
 }
 @media (max-width: 600px) {
   .grid {
